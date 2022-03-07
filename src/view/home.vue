@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="music">
-            <audio loop="loop" autoplay="autoplay">
+            <audio loop="loop" autoplay="autoplay" id="music-bg">
                 <source src="../assets/music/girl.mp3" type="audio/mpeg">
             </audio>
         </div>
@@ -58,7 +58,13 @@
         },
         methods: {
             handleClick() {
-                this.$refs.year.next()
+                this.$refs.year.next();
+                let audio = document.getElementById("music-bg");
+                audio.play();
+            },
+            play(){
+                let audio = document.getElementById("music-bg");
+                audio.play();
             }
         }
     }
