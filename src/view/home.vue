@@ -1,5 +1,5 @@
 <template>
-    <div class="main">
+    <div class="main" @click="play">
         <el-carousel direction="vertical" :autoplay="false" indicator-position="none" ref="year"
                      :initial-index="index">
             <el-carousel-item>
